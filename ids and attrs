@@ -1,0 +1,73 @@
+Preset ID Lists:
+Ore: {{Ids.Ore}}
+Ingot: {{Ids.Ingot}}
+BlockL: {{Ids.BlockL}}
+BlockS: {{Ids.BlockS}}
+Medic: {{Ids.Medic}}
+Food: {{Ids.Food}}
+Ingredient: {{Ids.Ingredient}}
+Sprout: {{Ids.Sprout}}
+Tools: {{Ids.Tools}}
+ArmorMod: {{Ids.ArmorMod}}
+
+
+
+
+
+{{i18n 287}}
+{{#use (configattr 287 'WeaponItem')}}
+WeaponItem: {{.}}
+{{~configbyname .}} (
+{{~Values.Id}}/
+{{~EcfValues.Id.Name}}:{{EcfValues.Id.Value}})
+
+AmmoType: {{Values.AmmoType}} (
+{{~configid Values.AmmoType}})
+{{/configbyname}}
+{{/use}}
+ 
+{{i18n 4296}}
+Group: {{configattr 1639 'Group'}}
+StackSize: {{configattr 4296 'StackSize'}}
+Volume: {{configattr 4296 'Volume'}}
+Mass: {{configattr 4296 'Mass'}}
+
+Stack/2: {{calc (configattr 4296 'StackSize') '/' 2}}
+Stack*2: {{calc (configattr 4296 'StackSize') '*' 2}}
+ 
+53: 
+{{#configbyid 53}}
+{{#each Attr}}
+{{Name}}: {{Value}}
+{{#each AddOns}}
+{{@key}}: {{.}}
+{{/each}}
+{{/each}}
+{{#each Childs}}
+{{#each Attr}}
+{{Name}}: {{Value}}
+{{#each AddOns}}
+{{@key}}: {{.}}
+{{/each}}
+{{/each}}
+{{/each}}
+{{/configbyid}}
+ 
+4078:
+{{#configbyid 4078}}
+{{#each Attr}}
+{{Name}}: {{Value}}
+{{/each}}
+{{/configbyid}}
+ 
+Ratatouille:
+{{#configbyname 'Ratatouille'}}
+{{#each Attr}}
+{{Name}}: {{Value}}
+{{/each}}
+{{#each Childs}}
+{{#each Attr}}
+{{Name}}: {{Value}}
+{{/each}}
+{{/each}}
+{{/configbyname}}
