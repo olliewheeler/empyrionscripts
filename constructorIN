@@ -1,0 +1,10 @@
+<align=center><color=green><size=10>SORTING CONSTRUCTOR</size></color></align>
+{{#items E.S '*ST-*'}}
+{{~set 'ConstructorIN' 'Constructor-IN'}}
+{{~set 'Amount' '50000'}}
+
+{{#ok @root.Data.ConstructorIN}}
+{{#move ../. @root.E.S @root.Data.ConstructorIN @root.Data.Amount}}
+{{/move}}
+{{/ok}}
+{{/items}}
