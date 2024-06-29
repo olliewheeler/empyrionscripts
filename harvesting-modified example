@@ -1,0 +1,34 @@
+<sprite name="Hydroponics">
+{{#blocks E.S 5 129 40 7 129 41}}
+{{#each .}}
+{{Id}} {{i18n Id}} X:
+{{~Position.X}} Y:
+{{~Position.Y}} Z:
+{{~Position.Z}}
+{{/each}}
+{{~#getsignal @root.E.S 'PlantsHarvest'}}
+{{~#if .}}
+{{#harvest @root.E.S ../.
+ 'MainFridge' 4 129 41 true}}
+Harvest: {{i18n Id}}➔
+{{~i18n ChildOnHarvestId}}
+get {{DropOnHarvestCount}}:
+{{~i18n DropOnHarvestId}}
+{{/harvest}}
+{{else}}
+{{#pickupplants @root.E.S ../.
+ 'PickupPlantsTarget' 4 129 41 true}}
+Pickup: {{i18n Id}}➔{{i18n PickupTargetId}}
+{{/pickupplants}}
+{{/if}}
+{{/getsignal}}
+{{/blocks}}
+{{~#getsignal @root.E.S 'PlantsHarvest'}}
+{{~#if .}}
+{{#replantplants @root.E.S 
+ 'PickupPlantsTarget'}}
+Plant: {{i18n Id}}➔X:{{X}} Y:{{Y}} Z:{{Z}}
+{{/replantplants}}
+{{/if}}
+{{/getsignal}}
+
