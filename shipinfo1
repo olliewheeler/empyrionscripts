@@ -1,0 +1,15 @@
+IsLocal: {{E.IsLocal}}
+IsPoi: {{E.IsPoi}}
+IsProxy: {{E.IsProxy}}
+ 
+Forward: {{E.Forward}}
+BelongsTo: {{E.BelongsTo}}
+DockedTo: {{E.DockedTo}}
+ 
+BlockCount: {{E.S.BlockCount}}
+TriangleCount: {{E.S.TriangleCount}}
+LightCount: {{E.S.LightCount}}
+ 
+Fuel: {{E.S.Fuel}}
+PowerConsumption: {{E.S.PowerConsumption}}
+PowerOutCapacity: {{E.S.PowerOutCapacity}}
