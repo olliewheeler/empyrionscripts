@@ -32,3 +32,46 @@ MaxPos:
 - X:{{E.S.MaxPos.X}}
 - Y:{{E.S.MaxPos.Y}}
 - Z:{{E.S.MaxPos.Z}}
+
+
+-------------------------------------------
+
+{{fontsize 5}}
+Player on structure:
+{{#each E.S.Players}}
+Name: {{Name}} 
+ 
+Data only if same faction as structure
+or on admin structures
+------------------------------------------
+{{#if Origin}}
+Credits: {{Credits}}
+Died: {{Died}} Kills:{{Kills}} Ping:{{Ping}}ms
+Origin:{{Origin}} StartPlanet:{{StartPlayfield}}
+UP:{{UpgradePoints}} XP:{{ExperiencePoints}}
+Faction:{{FactionRole}}
+SteamId:{{SteamId}}
+ 
+<size=70%>Stats:
+{{bar Stamina 0 StaminaMax 10}} 
+{{~format Stamina '{0,4}'}} Stamina
+{{bar Food 0 FoodMax 10  '☰' '┅'}}
+{{~format Food '{0,5:0.#}'}} Food 
+{{bar Health 0 HealthMax 10}} 
+{{~format Health '{0,4}'}} Health
+{{bar Oxygen 0 OxygenMax 10}} 
+{{~format Oxygen '{0,4}'}} Oxygen
+{{bar Radiation 0 RadiationMax 10}}
+{{~format Radiation '{0,5:0.#}'}} Radiation
+{{bar BodyTemp 0 BodyTempMax 10}} 
+{{~format BodyTemp '{0,4}'}}  BodyTemp
+{{/if}}
+ 
+Bag:
+{{#scroll 5 1}}
+{{#each Bag}}
+{{format count '{0,4}'}} {{i18n id 'Deutsch'}}
+{{/each}}
+{{/scroll}}
+{{/each}}
+{{/each}}
