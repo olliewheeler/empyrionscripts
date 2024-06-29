@@ -13,3 +13,22 @@ LightCount: {{E.S.LightCount}}
 Fuel: {{E.S.Fuel}}
 PowerConsumption: {{E.S.PowerConsumption}}
 PowerOutCapacity: {{E.S.PowerOutCapacity}}
+
+-----------------------------------------
+
+{{#block E.S 0 128 0}}
+Core: {{Active}} == {{@root.E.S.IsPowerd}}
+{{/block}}
+{{#block E.S 5 129 -3}}
+Shield: {{Active}}
+{{/block}}
+ 
+ShipSize:
+MinPos: 
+- X:{{E.S.MinPos.X}} 
+- Y:{{E.S.MinPos.Y}}
+- Z:{{E.S.MinPos.Z}}
+MaxPos:
+- X:{{E.S.MaxPos.X}}
+- Y:{{E.S.MaxPos.Y}}
+- Z:{{E.S.MaxPos.Z}}
