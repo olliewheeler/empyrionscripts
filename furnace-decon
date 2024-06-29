@@ -20,6 +20,12 @@ DECON MAIN</size></color></align>
 
 
 -----------------------------------------------------------------
+
+Could modify the below script with the following
+(concat @Ids.BlocksL @Ids.BlocksS)
+
+----------------------------------------------------------------
+
 DORF'S SPECIAL SCRIPT
 
 <align=center><color=green><size=10>FURNACE
