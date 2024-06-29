@@ -1,0 +1,70 @@
+Playfield: "{{P.Name}}"/{{P.PlayfieldType}}/
+{{~P.PlanetType}}/{{P.PlanetClass}}/
+{{~P.IsPvP}}
+Entity: "{{E.Name}}" Power:
+{{~E.S.IsPowerd}} #{{E.Id}} {{E.Pos}}
+ 
+{{#use E.S.FuelTank}}
+{{bar Content 0 Capacity 20 }} 
+{{~math Content '/' Capacity}}
+{{~format . '{0,8:P2}'}}
+{{~/math}} = 
+{{~format Content '{0,7:0.0}'}} / {{format Capacity '{0,7:0.0}'}} Fuel
+{{/use}}
+
+{{#use E.S.OxygenTank}}
+{{bar Content 0 Capacity 20 }} 
+{{~math Content '/' Capacity}}
+{{~format . '{0,8:P2}'}}
+{{~/math}} = 
+{{~format Content '{0,7:0.0}'}} / {{format Capacity '{0,7:0.0}'}} Oxygen
+{{/use}}
+
+{{#use E.S.PentaxidTank}}
+{{bar Content 0 Capacity 20 }} 
+{{~math Content '/' Capacity}}
+{{~format . '{0,8:P2}'}}
+{{~/math}} = 
+{{~format Content '{0,7:0.0}'}} / 
+{{~format Capacity '{0,7:0.0}'}} AU
+{{/use}}
+
+{{#use E.S.DamageLevel}}
+{{bar . 0 100 20 }} 
+{{~format . '{0,8:P2}'}} Damage
+{{/use}}
+ 
+Docked:
+{{#each E.S.DockedE}}
+- {{Name}} 
+{{~use S.FuelTank}}
+{{~math Content '/' Capacity}}
+{{~format . '{0,8:P2} Fuel'}}
+{{~/math}}
+{{/use}} 
+{{~use S.OxygenTank}}
+{{~math Content '/' Capacity}}
+{{~format . '{0,8:P2} O2'}}
+{{~/math}}
+{{/use}}
+{{/each}}
+ 
+Pilot: {{E.S.Pilot.Name}}
+
+Passengers:
+{{#each E.S.Passengers}}
+ - {{Name}}
+{{/each}}
+
+Players on Playfield:
+{{#each P.Players}}
+ - {{Name}}
+{{/each}}
+ 
+Players on Structure:
+{{#each E.S.Players}}
+ - {{Name}}
+{{/each}}
+ 
+Time on board: {{datetime}}
+{{Version}}
