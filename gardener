@@ -1,0 +1,32 @@
+Report:<size=2>
+{{~devices @root.E.S 'Gardener'}}
+{{~set 'GX' this.[0].Position.X}}
+{{~set 'GY' this.[0].Position.Y}}
+{{~set 'GZ' this.[0].Position.Z}}
+{{~devicesoftype @root.E.S 'Light'}}
+{{~#each .}}
+{{~test BlockType 'eq' 564}}
+- {{i18n Id}} <sup>({{Position.X}}, {{Position.Y}}, {{Position.Z}})</sup>
+{{~set 'FX' (calc Position.X '-' 1)}}
+{{~set 'FY' (calc Position.Y '-' 1)}}
+{{~set 'FZ' (calc Position.Z '-' 1)}}
+{{~set 'TX' (calc Position.X '+' 1)}}
+{{~set 'TY' (calc Position.Y '-' 1)}}
+{{~set 'TZ' (calc Position.Z '+' 1)}}
+{{~blocks @root.E.S  @root.data.FX @root.data.FY @root.data.FZ @root.data.TX @root.data.TY @root.data.TZ}}
+{{#each .}}
+-- {{i18n Id}} <sup>({{Position.X}}, {{Position.Y}}, {{Position.Z}})</sup>
+{{/each}}
+{{harvest @root.E.S . 'RawIngredients' @root.data.GX @root.data.GY @root.data.GZ}}
+  -- Harvest: {{i18n Id}}➔
+{{~i18n ChildOnHarvestId}}
+get {{DropOnHarvestCount}}:
+{{~i18n DropOnHarvestId}}
+{{~/harvest}}
+{{else}}-- No Blocks{{/blocks~}}
+{{/test~}}
+{{/each~}}
+{{/devicesoftype}}
+{{else}}
+No Gardener Found!
+{{/devices}}
