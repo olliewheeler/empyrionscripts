@@ -1,0 +1,20 @@
+{{#items E.S 'FillBox'}}
+{{#fill this @root.E.S 'Oxygen' 100}}
+Oxygen: {{SourceE.Name}}:{{Source}}->
+{{~DestinationE.Name}}:{{Destination}}
+{{format Count '{0,5}'}} : {{i18n Id}}
+{{datetime}}
+{{/fill}}
+{{#fill this @root.E.S 'Fuel' 80}}
+Fuel: {{SourceE.Name}}:{{Source}}->
+{{~DestinationE.Name}}:{{Destination}}
+{{format Count '{0,5}'}} : {{i18n Id}}
+{{datetime}}
+{{/fill}}
+{{#fill this @root.E.S 'Pentaxid' 50}}
+Pentaxid: {{SourceE.Name}}:{{Source}}->
+{{~DestinationE.Name}}:{{Destination}}
+{{format Count '{0,5}'}} : {{i18n Id}}
+{{datetime}}
+{{/fill}}
+{{/items}}
