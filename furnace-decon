@@ -17,3 +17,27 @@ DECON MAIN</size></color></align>
 {{/move}}
 {{/ok}}
 {{/items}}
+
+
+-----------------------------------------------------------------
+DORF'S SPECIAL SCRIPT
+
+<align=center><color=green><size=10>FURNACE
+DECON MAIN</size></color></align>
+{{#items E.S 'CargoIn*'}}
+{{~set 'Sorting' ''}}
+{{~set 'Amount' ''}}
+
+{{#test Id in '4297,4298,4359,4300,4301,4361,4332,4316,4317,4343,4299,4345'}}
+{{~set 'Sorting' 'Furnace-In'}}
+{{/test}}
+
+{{#test Id in '380,396,402,405,411,462,468,545,839,1075,1129,1322,1395,1478,1481,1549,1594,1685,1691,1711,2914,4183,'}}
+{{~set 'Sorting' 'ConstructionBlocks'}}
+{{/test}}
+
+{{#ok @root.Data.Sorting}}
+{{#move ../. @root.E.S @root.Data.Sorting @root.Data.Amount}}
+{{/move}}
+{{/ok}}
+{{/items}}
