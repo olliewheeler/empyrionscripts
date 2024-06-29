@@ -1,0 +1,23 @@
+{{#lights E.S 'LightTest1'}}
+{{#intervall 4}}
+{{lightcolor this 'ff00ff'}}
+purple
+{{#intervall 2}}
+{{lightintensity this 1}}
+intensity this 1
+{{else}}
+{{lightintensity this 3}}
+intensity this 3
+{{/intervall}}
+{{else}}
+{{lightcolor this '00ff00'}}
+green
+{{#intervall 2}}
+{{lightintensity this 6}}
+intensity this 6
+{{else}}
+{{lightintensity this 9}}
+intensity this 9
+{{/intervall}}
+{{/intervall}}
+{{/lights}}
