@@ -90,4 +90,24 @@ ScriptingModInfo:
 {{.}}
 </size>
 {{/each}}
+
+
+------------------------------------------------
+
+Scriptinfos: [{{E.ScriptInfos.Length}}]
+-----------------------------------------------------
+{{#orderedeach E.ScriptInfos
+ '-NeedsMainThread,+ScriptLanguage,+ExecTime'}}
+{{~#ok NeedsMainThread}}<color=purple>
+{{~else}}<color=green>
+{{~/ok}}
+{{~#split ScriptId '/'}}
+{{format (substring .1 0, 30) '{0,-20}'}}
+{{~/split}}</color><pos=15em>#
+{{~Count}}<pos=21em>☠
+{{~TimeLimitReached}}<pos=26em>☰
+{{~RunningInstances}}<pos=28em>↓
+{{~ScriptPriority}}<pos=30em>⚡
+{{~ExecTime}} ★{{LastStart}}
+{{/orderedeach}}
  
