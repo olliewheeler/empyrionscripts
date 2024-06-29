@@ -75,3 +75,19 @@ Bag:
 {{/scroll}}
 {{/each}}
 {{/each}}
+
+
+
+---------------------------------------------
+
+<size=40%>
+ScriptingModInfo:
+{{ScriptingModInfoData}}</size>
+
+{{~#each ScriptingModScriptsInfoData}}
+<color=red>Playfield:{{@Key}}</color>
+<size=40%>
+{{.}}
+</size>
+{{/each}}
+ 
