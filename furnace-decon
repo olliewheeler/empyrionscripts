@@ -4,7 +4,7 @@ DECON MAIN</size></color></align>
 {{~set 'Sorting' ''}}
 {{~set 'Amount' ''}}
 
-{{#test Id in '4297-4299,4359,4300,4301,4361,4332,4316-4318,4343,4345'}}
+{{#test Id in '4297-4299,4359,4300,4301,4361,4332,4316-4318,4343,4345,4365'}}
 {{~set 'Sorting' 'Furnace-In'}}
 {{/test}}
 
