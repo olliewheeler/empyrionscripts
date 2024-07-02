@@ -13,11 +13,12 @@
 {{/ok}}
 {{/items}}
 
-{{#items E.S 'ST-*'}}
-{{~set 'Sorting' 'Constructor-In'}}
+{{#items E.S '*ST-*'}}
+{{~set 'ConstructorIN' 'Constructor-IN'}}
 {{~set 'Amount' '50000'}}
-{{#ok @root.Data.Sorting}}
-{{#move ../. @root.Data.Sorting @root.Data.Amount}}
+
+{{#ok @root.Data.ConstructorIN}}
+{{#move ../. @root.E.S @root.Data.ConstructorIN @root.Data.Amount}}
 {{/move}}
 {{/ok}}
 {{/items}}
