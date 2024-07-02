@@ -14,10 +14,10 @@
 {{/items}}
 
 {{#items E.S 'ST-*'}}
-{{~set 'Fillthebox' 'Construct-In'}}
+{{~set 'Sorting' 'Construct-In'}}
 {{~set 'Amount' '50000}}
-{{#ok @root.Data.Fillthebox}}
-{{#move ../. @root.Data.Fillthebox @root.Data.Amount}}
+{{#ok @root.Data.Sorting}}
+{{#move ../. @root.Data.Sorting @root.Data.Amount}}
 {{/move}}
 {{/ok}}
 {{/items}}
