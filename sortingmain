@@ -14,7 +14,7 @@
 {{/items}}
 
 {{#items E.S 'ST-*'}}
-{{~set 'Sorting' 'Construct-In'}}
+{{~set 'Sorting' 'Constructor-In'}}
 {{~set 'Amount' '50000}}
 {{#ok @root.Data.Sorting}}
 {{#move ../. @root.Data.Sorting @root.Data.Amount}}
