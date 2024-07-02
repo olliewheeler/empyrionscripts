@@ -1,5 +1,4 @@
-<align=center><color=green><size=10>FURNACE
-DECON MAIN</size></color></align>
+<align=center><color=green><size=10>SPROUT SORTING</size></color></align>
 {{#items E.S 'CargoIn*'}}
 {{~set 'Sorting' ''}}
 {{~set 'Amount' ''}}
