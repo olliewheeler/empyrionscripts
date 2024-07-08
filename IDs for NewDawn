@@ -1,15 +1,36 @@
+345 Laser Turret
+428 Railgun
+429 Gatling Cannon
+430 Laser Cannon
+431 Plasma Cannon
+432 Rocket Launcher
+489 Guided Missile Launcher
 550 Imperial Laser Turret
 551 Imperial Plasma Turret
 552 Imperial Missile Turret
+646 Artillery Cannon
+647 Advanced Laser Cannon
+669 Harvester Module
+683 Mechanical Drill Module
+852 Laser Drill Module (SV)
+1236 Laser Drill Module
 1648 Projectile Turrets
 1649 Missile Turrets
 1650 Laser Turrets
 1651 Artillery Turrets
 1673 Sentry Guns - Player
+2158 Heavy Automatic Turrets (CV)
+2163 Heavy Missile Turrets (CV)
+2168 Heavy Laser Turrets (CV)
+2173 Heavy Artillery Turrets (CV)
 2183 Heavy Automatic Turrets (Base)
 2188 Heavy Missile Turrets (Base)
 2193 Heavy Laser Turrets (Base)
 2198 Heavy Artillery Turrets (Base)
+2203 Heavy Laser Turret
+2204 Heavy Minigun Turrets
+2207 Heavy Missile Turrets (HV)
+2213 Heavy Artillery Turrets (HV)
 2222 Imperial Heavy Laser Battery
 2223 Imperial Heavy Plasma Battery
 2224 Imperial Heavy Missile Battery
@@ -48,10 +69,4 @@
 3534 ND Sentinel Guardian Sentry Turret
 3535 ND Heavy Gatling Plasma Turrets
 3538 ND Heavy Plasma Turrets
-3541 ND Heavy Positron Turrets
-3544 ND Phalanx CIWS 'Sea-Wiz' Turrets
-3547 ND RGM-84 Harpoon Missile Launchers
-3550 ND 424mm Artillery Cannon Turrets
-3553 ND Railgun Turret
-3755 UFO Cosmic Ray Turrets
-3758 UFO Dark Matter Annihilation Turrets
+35
