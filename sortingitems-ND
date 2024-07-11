@@ -7,31 +7,31 @@
 {{~set 'Sorting' 'Misc'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.Medic @Ids.IngredientExtraMod '1')}}
+{{~#test Id 'in' (concat @Ids.Medic @Ids.IngredientExtraMod '1000')}}
 {{~set 'Sorting' 'Meds'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.ArmorMod @Ids.Armor '1')}}
+{{~#test Id 'in' (concat @Ids.ArmorMod @Ids.Armor '1000')}}
 {{~set 'Sorting' 'ArmorBooster*'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1')}}
+{{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1000')}}
 {{~set 'Sorting' 'HandWeapons*'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.AmmoPlayer '1')}}
+{{~#test Id 'in' (concat @Ids.AmmoPlayer '1000')}}
 {{~set 'Sorting' 'HandWeaponAmmo*'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.Fuel '1')}}
+{{~#test Id 'in' (concat @Ids.Fuel '1000')}}
 {{~set 'Sorting' 'Fuel'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV '1')}}
+{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV '1000')}}
 {{~set 'Sorting' 'MountedWeapons'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.AmmoCV @Ids.AmmoBA @Ids.AmmoSV @Ids.AmmoHV '1')}}
+{{~#test Id 'in' (concat @Ids.AmmoCV @Ids.AmmoBA @Ids.AmmoSV @Ids.AmmoHV '1000')}}
 {{~set 'Sorting' 'MountedWeaponAmmo'}}
 {{/test}}
 
