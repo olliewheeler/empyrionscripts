@@ -7,11 +7,11 @@
 {{~set 'Sorting' 'Misc'}}
 {{/test}}
 
-{{#test Id in '4403,4404-4407,4423,4425,4430,4433,4437,4441,4464,4474,4475,4476,4478,4483,4486-4489,7316,7446,7448,7450,7452-7454,7457,7458-7465,7466'}}
+{{~#test Id 'in' (concat @Ids.Medic @Ids.IngredientExtraMod '1')}}
 {{~set 'Sorting' 'Meds'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.ArmorMod '1')}}
+{{~#test Id 'in' (concat @Ids.ArmorMod @Ids.Armor '1')}}
 {{~set 'Sorting' 'ArmorBooster*'}}
 {{/test}}
 
@@ -19,7 +19,7 @@
 {{~set 'Sorting' 'HandWeapons*'}}
 {{/test}}
 
-{{#test Id in '4149,4150,4151,4153,4156,4157,4158,4162,5703,7213'}}
+{{~#test Id 'in' (concat @Ids.AmmoPlayer '1')}}
 {{~set 'Sorting' 'HandWeaponAmmo*'}}
 {{/test}}
 
@@ -27,11 +27,11 @@
 {{~set 'Sorting' 'Fuel'}}
 {{/test}}
 
-{{#test Id in '552,2226,2275,2278,2281,2712-2713,2721-2723,2788,2791,2809,2811,3293'}}
+{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV '1')}}
 {{~set 'Sorting' 'MountedWeapons'}}
 {{/test}}
 
-{{#test Id in '4247,4263,5735,5849,7108,7148,7197'}}
+{{~#test Id 'in' (concat @Ids.AmmoCV @Ids.AmmoBA @Ids.AmmoSV @Ids.AmmoHV '1')}}
 {{~set 'Sorting' 'MountedWeaponAmmo'}}
 {{/test}}
 
@@ -44,12 +44,14 @@
 -----------------
 EXAMPLE
 
-WeaponPlayerEpic
-WeaponPlayer
-Tools
 
-Armor
+{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV '1')}}
+
+
+{{~#test Id 'in' (concat @Ids.Medic @Ids.IngredientExtraMod '1')}}
 
 {{~#test Id 'in' (concat @Ids.ArmorMod '7234')}}
+{{~#test Id 'in' (concat @Ids.AmmoPlayer '1')}}
+
 {{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1')}}
 {{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '1')}}
