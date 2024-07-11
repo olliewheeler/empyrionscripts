@@ -8,7 +8,7 @@ DECON MAIN</size></color></align>
 {{~set 'Sorting' 'FurnaceIn'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.BlockL @Ids.BlockS @Ids.DeviceL @Ids.DeviceS @Ids.Deconstruct @Ids.Deco)}}
+{{~#test Id 'in' (concat @Ids.BlockL @Ids.BlockS @Ids.DeviceL @Ids.DeviceS @Ids.Deconstruct @Ids.Deco '1000')}}
 {{~set 'Sorting' 'DeconstructorIn'}}
 {{/test}}
 
