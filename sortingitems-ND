@@ -11,7 +11,7 @@
 {{~set 'Sorting' 'Meds'}}
 {{/test}}
 
-{{#test Id in '4696-4699,4700,4701,4717-4725,4746-4748,4750-4752,7219-7222,8127,8131'}}
+{{~#test Id 'in' (concat @Ids.ArmorMod '1')}}
 {{~set 'Sorting' 'ArmorBooster*'}}
 {{/test}}
 
@@ -40,3 +40,8 @@
 {{/move}}
 {{/ok}}
 {{/items}}
+
+-----------------
+EXAMPLE
+
+{{~#test Id 'in' (concat @Ids.ArmorMod '7234')}}
