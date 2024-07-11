@@ -45,3 +45,4 @@
 EXAMPLE
 
 {{~#test Id 'in' (concat @Ids.ArmorMod '7234')}}
+{{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '5736,5848,7197,7199,7201,7234')}}
