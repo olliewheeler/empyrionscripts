@@ -1,0 +1,39 @@
+<size=3>
+{{#scroll 24 4 5}}
+{{~#entitiesbyname '*'}}
+{{~#each .}}
+{{~#test Id in @root.Data.IDs}}{{else}}
+<size=3><color=red>{{Name}}: {{Id}}</color></size>
+{{recycle . '*DeconShips' 'R'}}  min: X:
+{{~MinPos.X}} Y:{{~MinPos.Y}} Z:{{~MinPos.Z}}
+  max: X:{{MaxPos.X}} Y:
+{{~MaxPos.Y}} Z:{{MaxPos.Z}}
+  current X:{{X}} Y:{{Y}} Z:{{Z}}
+  Blocks: Total:{{TotalBlocks}}  Checked:
+{{~CheckedBlocks}}  RemovedBlocks:
+{{~RemovedBlocks}}
+{{/recycle}}
+<size=3><color=green>{{Name}}: {{Id}}</color></size>
+{{deconstruct . '*DeconShips' 'D'}}  min: X:
+{{~MinPos.X}} Y:{{~MinPos.Y}} Z:{{~MinPos.Z}}
+  max: X:{{MaxPos.X}} Y:
+{{~MaxPos.Y}} Z:{{MaxPos.Z}}
+  current X:{{X}} Y:{{Y}} Z:{{Z}}
+  Blocks: Total:{{TotalBlocks}}  Checked:
+{{~CheckedBlocks}}  RemovedBlocks:
+{{~RemovedBlocks}}
+{{/deconstruct}}
+<size=3><color=orange>{{Name}}: {{Id}}</color></size>
+{{deconstruct . '*DeconShips' 'S''53-330,332-498,520,535-540,545-613,615-618,620-685,687-1073,1075-1076,1077-1080,1085-1231,1233-1280,1281-1285,1294-1296,1299-1713,1717-1739,1773-1793,1794-2047,2090,2091,2100-2200,2201,2251,2685-2688,2732,2766,2779,2786,2792,2800,2802,2831,2837,'}}  min: X:
+{{~MinPos.X}} Y:{{~MinPos.Y}} Z:{{~MinPos.Z}}
+  max: X:{{MaxPos.X}} Y:
+{{~MaxPos.Y}} Z:{{MaxPos.Z}}
+  current X:{{X}} Y:{{Y}} Z:{{Z}}
+  Blocks: Total:{{TotalBlocks}}  Checked:
+{{~CheckedBlocks}}  RemovedBlocks:
+{{~RemovedBlocks}}
+{{/deconstruct}}
+{{/test}}
+{{/each}}
+{{/entitiesbyname}}
+{{/scroll}}
