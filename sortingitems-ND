@@ -23,7 +23,7 @@
 {{~set 'Sorting' 'HandWeaponAmmo*'}}
 {{/test}}
 
-{{#test Id in '4159,4176,4302,4337,4358,4421,4428,5109,7947,8128,8133,8135,8140'}}
+{{~#test Id 'in' (concat @Ids.Fuel '1')}}
 {{~set 'Sorting' 'Fuel'}}
 {{/test}}
 
@@ -51,7 +51,7 @@ EXAMPLE
 {{~#test Id 'in' (concat @Ids.Medic @Ids.IngredientExtraMod '1')}}
 
 {{~#test Id 'in' (concat @Ids.ArmorMod '7234')}}
-{{~#test Id 'in' (concat @Ids.AmmoPlayer '1')}}
+{{~#test Id 'in' (concat @Ids.Fuel '1')}}
 
 {{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1')}}
 {{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '1')}}
