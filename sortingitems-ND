@@ -15,7 +15,7 @@
 {{~set 'Sorting' 'ArmorBooster*'}}
 {{/test}}
 
-{{#test Id in '4099,4105,4110-4113,4114,4120-4123,4124-4139,5652-5656,5661,5846,5847,7202,7212,7214-7218,7225-7227,7260,7261'}}
+{{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1')}}
 {{~set 'Sorting' 'HandWeapons*'}}
 {{/test}}
 
@@ -44,5 +44,12 @@
 -----------------
 EXAMPLE
 
+WeaponPlayerEpic
+WeaponPlayer
+Tools
+
+Armor
+
 {{~#test Id 'in' (concat @Ids.ArmorMod '7234')}}
-{{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '5736,5848,7197,7199,7201,7234')}}
+{{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1')}}
+{{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '1')}}
