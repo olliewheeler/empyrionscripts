@@ -3,7 +3,7 @@
 {{~set 'Sorting' ''}}
 {{~set 'Amount' ''}}
 
-{{#test Id in '4296,4303-4331,4333,4334,4335,4338-4342,4346,4350-4357,4360,4362-4364,4366,4367,4374-4377,4378-4381,4401,4444,4445,5108,5706-5708,6000,6001,6003,6004,6006,6008,6009,6010,7298,7301,7303,7310,7312,7313,7320,7341,7343,7345,7349,7364-7367,7513,7735-7737,7920,7922,7923,7928,7932,7933,7935-7939,7942,7943,7945,7946,7934,7944,8132,8136,8152-8167'}}
+{{~#test Id 'in' (concat @Ids.Ingot @Ids.Components @Ids.EdenComponents '1')}}
 {{~set 'Sorting' 'ST-*'}}
 {{/test}}
 
@@ -14,11 +14,17 @@
 {{/items}}
 
 {{#items E.S '*ST-*'}}
-{{~set 'ConstructorIN' 'Constructor-IN'}}
+{{~set 'XFER' 'ConstructorIn'}}
 {{~set 'Amount' '50000'}}
 
 {{#ok @root.Data.ConstructorIN}}
-{{#move ../. @root.E.S @root.Data.ConstructorIN @root.Data.Amount}}
+{{#move ../. @root.E.S @root.Data.XFER @root.Data.Amount}}
 {{/move}}
 {{/ok}}
 {{/items}}
+
+
+-----------------
+EXAMPLE
+
+{{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '5736,5848,7197,7199,7201,7234')}}
