@@ -16,7 +16,7 @@ DECON MAIN</size></color></align>
 
 
 ---------------------
-Could modify the below script with the following
+Could modify the below script with the following EXAMPLES
 (concat @Ids.BlocksL @Ids.BlocksS)
 {{~#test Id 'in' (concat @Ids.AmmoBA '7106,5716,7276,7240,7242,7249')}}
 {{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '5736,5848,7197,7199,7201,7234')}}
