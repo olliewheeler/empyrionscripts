@@ -55,3 +55,47 @@ EXAMPLE
 
 {{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1')}}
 {{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '1')}}
+
+
+550 Imperial Laser Turret
+551 Imperial Plasma Turret
+558 Core
+1395 Xenosteel Blocks
+2735 LX-2 Prototype Light Railgun Construction Frame
+2833 Modulated Laser Turret (Infrared)
+3106 ND Laser Turret
+3107 ND Heavy Laser Turret
+3108 ND Disruptor
+3298 ND Thermal Fury
+3528 ND Heavy Positron Beam Cannon
+3529 ND Heavy Spectral Laser
+3535 ND Heavy Gatling Plasma Turrets
+3538 ND Heavy Plasma Turrets
+3547 ND RGM-84 Harpoon Missile Launchers
+3550 ND 424mm Artillery Cannon Turrets
+3553 ND Railgun Turret
+3755 UFO Cosmic Ray Turrets
+4120 Heavy Assault Rifle
+4127 Advanced Multitool
+4136 Enhanced Laser Drill
+4150 5.8mmBullet
+4153 Drill Charge
+4176 Oxygen Bottle
+4247 Railgun Projectile
+4342 Refined Pentaxid
+4344 Money Card
+4360 Titanium Ingot
+4429 Spoiled food
+4434 Phoenix fern frond
+4451 Alien thorn
+4474 Energy pills
+4489 Anti-Radiation Injection
+4752 Advanced Radiation Shielding Booster
+6001 Sulfur
+6112 ND Python Medium Infantry Armor
+7345 Silver Powder
+
+
+
+
+
