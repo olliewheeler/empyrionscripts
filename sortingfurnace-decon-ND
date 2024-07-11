@@ -12,6 +12,15 @@ DECON MAIN</size></color></align>
 {{~set 'Sorting' 'DeconstructorIn'}}
 {{/test}}
 
+{{#ok @root.Data.Sorting}}
+{{#move ../. @root.E.S @root.Data.Sorting @root.Data.Amount}}
+{{/move}}
+{{/ok}}
+{{/items}}
+
+
+
+
 
 ---------------------
 Could modify the below script with the following EXAMPLES
@@ -29,9 +38,3 @@ Ids.Deco
 
 ===========================
 Deconstruct
-
-{{#ok @root.Data.Sorting}}
-{{#move ../. @root.E.S @root.Data.Sorting @root.Data.Amount}}
-{{/move}}
-{{/ok}}
-{{/items}}
