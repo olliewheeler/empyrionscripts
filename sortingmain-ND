@@ -17,7 +17,7 @@
 {{~set 'XFER' 'ConstructorIn'}}
 {{~set 'Amount' '50000'}}
 
-{{#ok @root.Data.ConstructorIN}}
+{{#ok @root.Data.XFER}}
 {{#move ../. @root.E.S @root.Data.XFER @root.Data.Amount}}
 {{/move}}
 {{/ok}}
