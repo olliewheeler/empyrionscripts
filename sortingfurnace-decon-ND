@@ -5,11 +5,11 @@ DECON MAIN</size></color></align>
 {{~set 'Amount' ''}}
 
 {{~#test Id 'in' (concat @Ids.OreFurnace '4343,4361')}}
-{{~set 'Sorting' 'Furnace-In'}}
+{{~set 'Sorting' 'FurnaceIn'}}
 {{/test}}
 
 {{~#test Id 'in' (concat @Ids.BlockL @Ids.BlockS @Ids.DeviceL @Ids.DeviceS @Ids.Deconstruct @Ids.Deco)}}
-{{~set 'Sorting' 'Deconstructor-In'}}
+{{~set 'Sorting' 'DeconstructorIn'}}
 {{/test}}
 
 
