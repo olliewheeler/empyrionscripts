@@ -27,7 +27,8 @@
 {{~set 'Sorting' 'Fuel'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV '550,551,2735,2833,3106-3108,3298,3535,3538,3547,3550,3553,3755')}}
+{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV 
+'550,551,2735,2833,3106-3108,3298,3535,3538,3547,3550,3528,3529,3553,3755')}}
 {{~set 'Sorting' 'MountedWeapons'}}
 Moving to weapons
 {{/test}}
