@@ -11,7 +11,7 @@
 {{~set 'Sorting' 'Meds'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.ArmorMod @Ids.Armor '1000')}}
+{{~#test Id 'in' (concat @Ids.ArmorMod @Ids.Armor '6112')}}
 {{~set 'Sorting' 'ArmorBooster*'}}
 {{/test}}
 
