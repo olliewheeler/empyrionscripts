@@ -27,7 +27,7 @@
 {{~set 'Sorting' 'Fuel'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV '1000')}}
+{{~#test Id 'in' (concat @Ids.WeaponBA @Ids.WeaponCV @Ids.WeaponSV @Ids.WeaponHV '550,551,2735,2833,3106-3108,3298,3535,3538,3547,3550,3553,3755')}}
 {{~set 'Sorting' 'MountedWeapons'}}
 {{/test}}
 
@@ -59,8 +59,6 @@ EXAMPLE
 
 550 Imperial Laser Turret
 551 Imperial Plasma Turret
-558 Core
-1395 Xenosteel Blocks
 2735 LX-2 Prototype Light Railgun Construction Frame
 2833 Modulated Laser Turret (Infrared)
 3106 ND Laser Turret
@@ -75,25 +73,6 @@ EXAMPLE
 3550 ND 424mm Artillery Cannon Turrets
 3553 ND Railgun Turret
 3755 UFO Cosmic Ray Turrets
-4120 Heavy Assault Rifle
-4127 Advanced Multitool
-4136 Enhanced Laser Drill
-4150 5.8mmBullet
-4153 Drill Charge
-4176 Oxygen Bottle
-4247 Railgun Projectile
-4342 Refined Pentaxid
-4344 Money Card
-4360 Titanium Ingot
-4429 Spoiled food
-4434 Phoenix fern frond
-4451 Alien thorn
-4474 Energy pills
-4489 Anti-Radiation Injection
-4752 Advanced Radiation Shielding Booster
-6001 Sulfur
-6112 ND Python Medium Infantry Armor
-7345 Silver Powder
 
 
 
