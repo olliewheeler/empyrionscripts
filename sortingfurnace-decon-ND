@@ -18,8 +18,19 @@ DECON MAIN</size></color></align>
 {{/ok}}
 {{/items}}
 
+{{#items E.S 'ConstructorIn'}}
+{{~set 'XFER' ''}}
+{{~set 'Amount' ''}}
 
+{{~#test Id 'in' (concat @Ids.OreFurnace '4316,4343,4361')}}
+{{~set 'XFER' 'FurnaceIn'}}
+{{/test}}
 
+{{#ok @root.Data.Sorting}}
+{{#move ../. @root.E.S @root.Data.XFER @root.Data.Amount}}
+{{/move}}
+{{/ok}}
+{{/items}}
 
 
 ---------------------
