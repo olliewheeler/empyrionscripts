@@ -4,7 +4,7 @@ DECON MAIN</size></color></align>
 {{~set 'Sorting' ''}}
 {{~set 'Amount' ''}}
 
-{{~#test Id 'in' (concat @Ids.OreFurnace '4343,4361')}}
+{{~#test Id 'in' (concat @Ids.OreFurnace '4316,4343,4361')}}
 {{~set 'Sorting' 'FurnaceIn'}}
 {{/test}}
 
