@@ -1,0 +1,33 @@
+For players on New Dawn.
+
+You will need: 
+Box called CargoIn (technically, you can have multiple boxes, you can call them anything as long as they start with CargoIn, e.g. CargoIn1 CargoIn2 etc)
+Box called ConstructorIn (this is what you will hook all your constructors up to. 50k of each resource is kept topped up in here.
+Box called FurnaceIn
+Box called DeconstructorIn
+Boxes called ST-* (e.g. ST-1, ST-2, ST-3 etc). This is the storage array. All items used in the constructor are held in this array of boxes. You will want 2-6 boxes. Add more if you want.
+Box called Misc
+Box called Meds
+Box called ArmorBooster (can be an array, ArmorBooster1, 2 3 etc will work.
+Box called HandWeapons (array, as above)
+Box called HandWeaponAmmo
+Box called Fuel
+Box called MountedWeapons
+Box called MountedWeaponAmmo
+
+You'll also likely want an output box for your constructor, ConstructorOut is my usual, but this isn't referenced by scripts.
+
+You will want 3 LCDs for scripts.
+These are the sortingitems-ND, sortingmain-ND and sortingfurnace-decon-ND.
+Each LCD, as usual, will need to be called 'Script:yourscriptnamehere'.
+
+These scripts aren't complete. They do not have all (or even most) of the IDs from new dawn in here. 
+What I would ask, is that if anyone wants to contribute to these scripts for new dawn. please add a script LCD with the following
+
+{{items E.S 'CargoIn*'}}
+{{Id}} {{Name}}
+{{/items}}
+
+and then add an LCD output. Then, send me the contents of the LCD output, and i'll get them added in.
+
+Comments and suggestions welcome. If you want to be added to the list of editors of this script, please let me know and i will add you.
