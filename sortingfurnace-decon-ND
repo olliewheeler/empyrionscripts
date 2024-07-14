@@ -8,7 +8,7 @@ DECON MAIN</size></color></align>
 {{~set 'Sorting' 'FurnaceIn'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.BlockL @Ids.BlockS @Ids.DeviceL @Ids.DeviceS @Ids.Deconstruct @Ids.Deco '1000')}}
+{{~#test Id 'in' (concat @Ids.BlockL @Ids.BlockS @Ids.DeviceL @Ids.DeviceS @Ids.Deconstruct @Ids.Deco '1556-1559,1630,1632,1909,2247')}}
 {{~set 'Sorting' 'DeconstructorIn'}}
 {{/test}}
 
@@ -27,6 +27,7 @@ Could modify the below script with the following EXAMPLES
 (concat @Ids.BlocksL @Ids.BlocksS)
 {{~#test Id 'in' (concat @Ids.AmmoBA '7106,5716,7276,7240,7242,7249')}}
 {{~#test Id 'in' (concat @Ids.AmmoSV @Ids.AmmoHV '5736,5848,7197,7199,7201,7234')}}
+
 
 
 
