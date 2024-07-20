@@ -1,3 +1,8 @@
+You need a cargo called TestBox
+a LCD called TestBoxDisplay
+a LCD called Script:TestBoxDisplay
+Put code below in the Script:TestBoxDisplay
+
 {{items E.S 'TestBox'}}
 {{Id}} {{Name}}
 {{/items}}
