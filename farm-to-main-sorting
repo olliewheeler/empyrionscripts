@@ -1,0 +1,14 @@
+<align=center><color=green><size=10>Farm Sorting</size></color></align>
+{{#items E.S 'RawIngredients'}}
+{{~set 'Sorting' ''}}
+{{~set 'Amount' ''}}
+
+{{#test Id in '4401'}}
+{{~set 'Sorting' 'CargoIn*'}}
+{{/test}}
+
+{{#ok @root.Data.Sorting}}
+{{#move ../. @root.E.S @root.Data.Sorting @root.Data.Amount}}
+{{/move}}
+{{/ok}}
+{{/items}}
