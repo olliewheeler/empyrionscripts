@@ -11,11 +11,11 @@
 {{~set 'Sorting' 'Meds'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.ArmorMod @Ids.Armor '6112')}}
+{{~#test Id 'in' (concat @Ids.ArmorMod @Ids.Armor '6111-6114,6144,6148,6149,6151')}}
 {{~set 'Sorting' 'ArmorBooster*'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '1000')}}
+{{~#test Id 'in' (concat @Ids.WeaponPlayerEpic @Ids.WeaponPlayer @Ids.Tools '6133,6134,6138')}}
 {{~set 'Sorting' 'HandWeapons*'}}
 {{/test}}
 
@@ -32,7 +32,7 @@
 Moving to weapons
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.AmmoCV @Ids.AmmoBA @Ids.AmmoSV @Ids.AmmoHV '1000')}}
+{{~#test Id 'in' (concat @Ids.AmmoCV @Ids.AmmoBA @Ids.AmmoSV @Ids.AmmoHV '6298,6319,6321,6323,6325')}}
 {{~set 'Sorting' 'MountedWeaponAmmo'}}
 {{/test}}
 
@@ -46,4 +46,3 @@ Moving to weapons
 {{/move}}
 {{/ok}}
 {{/items}}
-
