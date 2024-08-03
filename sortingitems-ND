@@ -36,8 +36,17 @@ Moving to weapons
 {{~set 'Sorting' 'MountedWeaponAmmo'}}
 {{/test}}
 
+{{#test Id in '3061,3063,3641,3733,6112'}}
+{{~set 'Sorting' 'ND-BACV-items'}}
+{{/test}}
+
+
 {{#ok @root.Data.Sorting}}
 {{#move ../. @root.E.S @root.Data.Sorting @root.Data.Amount}}
 {{/move}}
 {{/ok}}
 {{/items}}
+
+
+
+
