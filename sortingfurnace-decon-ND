@@ -38,6 +38,13 @@ DECON MAIN</size></color></align>
 1921 HeavyWindowVInv
 1927 HeavyWindowUInv
 
+<align=center><size=14><color=green>
+<u>Deconstructor In</u>
+<align=left><size=6><color=white><indent=10>
+{{items E.S 'DeconstructorIn'}}
+{{Name}} {{Id}}
+{{/items}}
+
 ---------------------
 Could modify the below script with the following EXAMPLES
 (concat @Ids.BlocksL @Ids.BlocksS)
