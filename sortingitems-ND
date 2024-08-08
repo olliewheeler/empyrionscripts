@@ -32,7 +32,7 @@
 Moving to weapons
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.AmmoCV @Ids.AmmoBA @Ids.AmmoSV @Ids.AmmoHV '4260,4268,5718,5720,5735,5849,6172,6298,6315,6317,6319,6321,6323,6325,6334')}}
+{{~#test Id 'in' (concat @Ids.AmmoCV @Ids.AmmoBA @Ids.AmmoSV @Ids.AmmoHV '4260,4268,5718,5720,5735,5849,6172,6298,6315,6317,6319,6321,6323,6325,6327,6329,6334,7268')}}
 {{~set 'Sorting' 'MountedWeaponAmmo'}}
 {{/test}}
 
