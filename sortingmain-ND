@@ -3,7 +3,7 @@
 {{~set 'Sorting' ''}}
 {{~set 'Amount' ''}}
 
-{{~#test Id 'in' (concat @Ids.Ingot @Ids.Components @Ids.EdenComponents '4176,4360,4367,4445,6000,6001,6006,6349,6350,6352,6354,7345')}}
+{{~#test Id 'in' (concat @Ids.Ingot @Ids.Components @Ids.EdenComponents '4176,4353,4356,4360,4367,4445,6000,6001,6006,6349,6350,6352,6354,7345')}}
 {{~set 'Sorting' 'ST-*'}}
 {{/test}}
 
