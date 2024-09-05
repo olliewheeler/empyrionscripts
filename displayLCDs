@@ -77,7 +77,7 @@
 {{bar 1 0 1  30 '═'}}</align>
 {{scroll 25 1}}
 {{#sortedeach E.S.Items 'Count' true}}
-{{~#test Id 'in' (concat @Ids.Ore '7300,7301,7342-7344,4365,4376')}}
+{{~#test Id 'in' (concat @Ids.Ore '7300,7301,7342-7345,4365,4376')}}
 <pos=10><color={{~#test Count geq @root.Data.limitGood}}green>{{~else}}{{~#test Count le @root.Data.limitMedium}}{{~#test Count le @root.Data.limitLow}}red>{{else}}orange>{{/test}}{{~else}}yellow>{{/test}}{{/test}}◉ {{i18n Key}}</pos> <pos=225>{{format Count '{0,6:N0}'}}</pos></color>
 {{/test}}
 {{/sortedeach}}
