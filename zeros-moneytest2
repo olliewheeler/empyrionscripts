@@ -1,1 +1,14 @@
-Money-Credits
+<align=center><color=green><size=10>Money Test</size></color></align>
+{{#items E.S 'Money-Credits*'}}
+{{~set 'Sorting' ''}}
+{{~set 'Amount' ''}}
+
+{{#test Id in '4401,4341,7302,7357'}}
+{{~set 'Sorting' 'Misc'}}
+{{/test}}
+
+{{#ok @root.Data.Sorting}}
+{{#move ../. @root.E.S @root.Data.Sorting @root.Data.Amount}}
+{{/move}}
+{{/ok}}
+{{/items}}
