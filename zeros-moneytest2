@@ -3,7 +3,7 @@
 {{~set 'Sorting' ''}}
 {{~set 'Amount' ''}}
 
-{{#test Id in '4401,4341,7302,7357'}}
+{{#test Id in '4344'}}
 {{~set 'Sorting' 'Misc'}}
 {{/test}}
 
