@@ -1,0 +1,48 @@
+{{set 'targetcolor' '2'}}
+{{set 'initialcolor' '21'}}
+{{set 'H' (calc (calc 128 '+' @root.E.S.MaxPos.Y) '-' (calc 128 '+' @root.E.S.MinPos.Y))}}
+{{set 'Bot' (calc 128 '+' @root.E.S.MinPos.Y)}}
+
+{{~steps 1 @root.Data.H 1 27}}
+{{set 'i' (calc this '+' (calc @root.Data.Bot '-' 1))}}
+{{#blocks @root.E.S @root.E.S.MinPos.X @root.Data.i @root.E.S.MinPos.Z @root.E.S.MaxPos.X @root.Data.i @root.E.S.MaxPos.Z}}
+{{#each .}}
+{{#test Top eq 10}}
+{{~#test TopColor eq @root.Data.initialcolor}}
+{{setcolor . @root.Data.targetcolor 'T'}}
+{{/test}}
+{{/test}}
+
+{{#test Bottom eq 10}}
+{{#test BottomColor eq @root.Data.initialcolor}}
+{{setcolor . @root.Data.targetcolor 'B'}}
+{{/test}}
+{{/test}}
+
+{{#test North eq 10}}
+{{#test NorthColor eq @root.Data.initialcolor}}
+{{setcolor . @root.Data.targetcolor 'N'}}
+{{/test}}
+{{/test}}
+
+{{#test South eq 10}}
+{{#test SouthColor eq @root.Data.initialcolor}}
+{{setcolor . @root.Data.targetcolor 'S'}}
+{{/test}}
+{{/test}}
+
+{{#test West eq 10}}
+{{#test WestColor eq @root.Data.initialcolor}}
+{{setcolor . @root.Data.targetcolor 'W'}}
+{{/test}}
+{{/test}}
+
+{{#test East eq 10}}
+{{#test EastColor eq @root.Data.initialcolor}}
+{{setcolor . @root.Data.targetcolor 'E'}}
+{{/test}}
+{{/test}}
+{{/each}}
+{{/blocks}}
+
+{{/steps}}
