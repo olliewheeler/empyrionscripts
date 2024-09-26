@@ -1,0 +1,23 @@
+PlayerData:
+        {{~devices @root.E.S 'LookupName'}}
+            {{setblock 'text'}}
+                {{@root.data.text}}
+                {{gettext ../0}}
+                    {{#if .}}
+                        {{.}}
+                    {{/if}}
+                {{/gettext}}
+            {{/setblock}}
+        {{/devices}}
+
+{{#db 'PlayerData'}}
+{{#each .}}
+{{#test Entities.name in @root.data.text}}
+{{~Entities.name}} is at [{{~SolarSystems.name}}] Sector  [{{~Playfields.name}}]
+{{else}}
+{{/test}}
+{{/each}}
+{{/db}}
+
+
+Make sure you have a LCD called 'LookupName' to look for.
