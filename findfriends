@@ -1,15 +1,11 @@
-PlayerData:
-        {{~devices @root.E.S 'LookupName'}}
-            {{setblock 'text'}}
-                {{@root.data.text}}
-                {{gettext ../0}}
-                    {{#if .}}
-                        {{.}}
-                    {{/if}}
-                {{/gettext}}
-            {{/setblock}}
-        {{/devices}}
+{{~devices @root.E.S 'LookupName'}}
+{{setblock 'text'}}
 
+{{gettext ../0}}
+{{.}}
+{{/gettext}}
+{{/setblock}}
+{{/devices}}
 {{#db 'PlayerData'}}
 {{#each .}}
 {{#test Entities.name in @root.data.text}}
@@ -18,6 +14,5 @@ PlayerData:
 {{/test}}
 {{/each}}
 {{/db}}
-
 
 Make sure you have a LCD called 'LookupName' to look for.
