@@ -1,0 +1,12 @@
+<size=3>TerrainPlaceables:
+{{#db 'TerrainPlaceables' 100 'blockid desc' 'blockid is 3121'}}
+{{#each .}}
+{{TerrainPlaceables.blockid}} - {{i18n TerrainPlaceables.blockid}}:
+{{~Entities.name}}
+{{~#ok TerrainPlaceables.facaccess}}
+(Faction){{else}}(private)
+{{~/ok}}➠{{~Playfields.name}}[
+{{~SolarSystems.name}}]
+
+{{/each}}
+{{/db}}
