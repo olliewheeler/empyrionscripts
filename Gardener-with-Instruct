@@ -94,3 +94,7 @@ get {{DropOnHarvestCount}}:
 {{/test}}
 {{/each}}
 {{/devices}}
+
+
+{{E.S.IsShieldActive}}
+{{E.S.ShieldLevel}}
