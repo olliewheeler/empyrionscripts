@@ -1,0 +1,31 @@
+{{~signalevents 'DirectToPilotSeat'}}
+{{~use .[0]}}
+{{#ok State}}
+{{#ok @root.CacheData.Teleported}}{{else}}
+{{setcache 'Teleported' true}}
+=============================
+Teleport:
+
+Name: {{Name}}
+State: {{State}} at {{TimeStamp}}
+TriggeredByPlayer: {{TriggeredByPlayer.Name}}
+
+{{#each @root.E.S.Players}}
+{{#test Id 'eq' ../TriggeredByPlayer.Id}}
+{{set 'FoundPlayer' .}}
+{{/test}}
+{{/each}}
+
+{{#block @root.E.S 0 129 1}}
+Teleport to: X:{{Position.x}} Y:
+{{~Position.y}} Z:{{Position.z}}
+{{teleportplayer @root.Data.FoundPlayer .}}
+{{/block}}
+{{/if}}
+
+{{/ok}}
+{{else}}
+{{~setcache 'Teleported' false}}
+{{/ok}}
+{{/use}}
+{{/signalevents}}
