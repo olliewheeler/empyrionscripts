@@ -8,7 +8,7 @@ DECON MAIN</size></color></align>
 {{~set 'Sorting' 'FurnaceIn'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.BlockL @Ids.BlockS @Ids.DeviceL @Ids.DeviceS @Ids.Deconstruct @Ids.Deco '1556-1559,1630,1632,1907,1909,1911,1917,1921,1927,2247')}}
+{{~#test Id 'in' (concat @Ids.BlockL @Ids.BlockS @Ids.DeviceL @Ids.DeviceS @Ids.Deconstruct @Ids.Deco '1269,1556-1559,1567,1630,1632,1907,1909,1911,1917,1921,1927,2247')}}
 {{~set 'Sorting' 'DeconstructorIn'}}
 {{/test}}
 
