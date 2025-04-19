@@ -23,7 +23,7 @@
 {{~set 'Sorting' 'HandWeaponAmmo*'}}
 {{/test}}
 
-{{~#test Id 'in' (concat @Ids.Fuel '1000')}}
+{{~#test Id 'in' (concat @Ids.Fuel '4336')}}
 {{~set 'Sorting' 'Fuel'}}
 {{/test}}
 
