@@ -1,0 +1,38 @@
+New Dawn READ ME
+
+In order for the New Dawn (ND) Scripts to function as intended you will need a set of Cargo Boxes:
+
+'CargoIn' This can be an array, as the scripts refer to CargoIn*, so you may have CargoIn1, CargoIn2, CargoInWhatever etc.
+'FurnaceIn'
+'DeconstrutorIn'
+'MountedWeapons'
+'MountedWeaponAmmo'
+'Misc'
+'Meds'
+'Fuel'
+
+
+A storage array of boxes with the prefix 'ST-'. I use ST-1, through to ST-20.
+
+The Script SortingMain-ND will pull all construction materials out of this box 
+(i.e. ingots, components (both vanilla and RE) into the storage array.
+
+The Script SortingFurnace-Decon-ND will pull all items that should be broken down, into 2 boxes.
+Anything that can be run through the furnace, will put inserted into a box called 'FurnaceIn'.
+Attach your Furnace input to this box.
+The Furnace Output should be attached to CargoIn.
+
+Anything that can be run through the deconstructor, will be inserted into a box called 'DeconstructorIn'
+Attach the deconstructor input to this box. The deconstructor output should be attached to CargoIn.
+
+Note that I'm also putting Titanium Plates and Sathium plates into the Furnace.
+These will turn back into Titanium Ore and Sathium Ore. These are then put back into CargoIn.
+Where they are pulled back into the Furnace again, to turn into Ingots.
+This is because 1 ore = 2 ingots = 4 plates, and so to reduce space consumption, they are dropped back to ingots.
+
+
+Known issues.
+- Hydroponic Units (concrete/steel/wood) are ending up in the deconstructor. This is due to the @Ids.BlockL shortcut being used. 
+I'm considering a work around.
+- The 3 ND ingots are moved to the constructor in, but the ND raw crystals are not.
+- Tungsten Ore is moved to the furnace, but it should be in the constructorIn.
