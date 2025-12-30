@@ -6,16 +6,14 @@
 {{/setblock~}}
 {{/devices}}
 {{~set 'newtext' (concat "Entities.name like '%" @root.Data.text "%'")~}}
+These are the POIs that contain the word <color=#F5210A><b><u>{{@root.data.text}}</u></b></color>.
+
 {{#scroll 50 1}}
 {{#db 'DiscoveredPOIs' 50 'SolarSystems.name asc' @root.data.newtext}}
 {{#each .}}
-{{~SolarSystems.name}}->
-{{~Playfields.name}}->
-{{~Entities.name}}
+[<color=yellow>{{~SolarSystems.name}}</color>] -> [<color=green>{{~Playfields.name}}</color>] -> [<color=#1F51FF>{{~Entities.name}}</color>]
 {{/each}}
 {{/db}}
 {{/scroll}}
 
 you will need an LCD called 'LookupPOI' and the output will appear on another LCD.
-
-it's not very pretty right now. i'll do that later
