@@ -8,7 +8,7 @@
 {{~set 'newtext' (concat "Entities.name like '%" @root.Data.text "%'")~}}
 These are the POIs that contain the word <color=#F5210A><b><u>{{@root.data.text}}</u></b></color>.
 
-{{#scroll 50 1}}
+{{#scroll 15 1}}
 {{#db 'DiscoveredPOIs' 50 'SolarSystems.name asc' @root.data.newtext}}
 {{#each .}}
 [<color=yellow>{{~SolarSystems.name}}</color>] -> [<color=green>{{~Playfields.name}}</color>] -> [<color=#1F51FF>{{~Entities.name}}</color>]
