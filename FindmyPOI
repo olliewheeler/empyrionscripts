@@ -1,0 +1,21 @@
+{{~devices @root.E.S 'LookupPOI'}}
+{{setblock 'text'}}
+{{~gettext ../0~}}
+{{~.~}}
+{{/gettext~}}
+{{/setblock~}}
+{{/devices}}
+{{~set 'newtext' (concat "Entities.name like '%" @root.Data.text "%'")~}}
+{{#scroll 50 1}}
+{{#db 'DiscoveredPOIs' 50 'SolarSystems.name asc' @root.data.newtext}}
+{{#each .}}
+{{~SolarSystems.name}}->
+{{~Playfields.name}}->
+{{~Entities.name}}
+{{/each}}
+{{/db}}
+{{/scroll}}
+
+you will need an LCD called 'LookupPOI' and the output will appear on another LCD.
+
+it's not very pretty right now. i'll do that later
