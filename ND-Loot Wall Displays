@@ -1,0 +1,103 @@
+{{~set 'limitLow' 500}}
+{{~set 'limitMedium' 5000}}
+{{~set 'limitGood' 10000}}
+<align=center><size=+7>Ores</size>
+{{bar 1 0 1  30 '═'}}</align>
+{{scroll 25 1}}
+{{#sortedeach E.S.Items 'Count' true}}
+{{~#test Id 'in' (concat @Ids.Ore '10447,10449,10445')}}
+<pos=10><color={{~#test Count geq @root.Data.limitGood}}green>{{~else}}{{~#test Count le @root.Data.limitMedium}}{{~#test Count le @root.Data.limitLow}}red>{{else}}orange>{{/test}}{{~else}}yellow>{{/test}}{{/test}}◉ {{i18n Key}}</pos> <pos=225>{{format Count '{0,6:N0}'}}</pos></color>
+{{/test}}
+{{/sortedeach}}
+{{#itemlist E.S.Items (concat @Ids.Ore '10445,10447,10449')}}{{~#test Count geq 1}}{{~else}}<pos=10><color=red>○ {{i18n Key}}</pos> <pos=235><size=+1>    ⚠</size></pos></color>
+{{/test}}
+{{/itemlist}}
+{{/scroll}}
+
+
+
+{{~set 'limitLow' 500}}
+{{~set 'limitMedium' 5000}}
+{{~set 'limitGood' 10000}}
+<align=center><size=+7>Ingots</size>
+{{bar 1 0 1  30 '═'}}</align>
+{{scroll 25 1}}
+{{#sortedeach E.S.Items 'Count' true}}
+{{~#test Id 'in' (concat @Ids.Ingot '10446,10448,10450')}}
+<pos=10><color={{~#test Count geq @root.Data.limitGood}}green>{{~else}}{{~#test Count le @root.Data.limitMedium}}{{~#test Count le @root.Data.limitLow}}red>{{else}}orange>{{/test}}{{~else}}yellow>{{/test}}{{/test}}◉ {{i18n Key}}</pos> <pos=225>{{format Count '{0,6:N0}'}}</pos></color>
+{{/test}}
+{{/sortedeach}}
+{{#itemlist E.S.Items (concat @Ids.Ingot ''10446,10448,10450')}}{{~#test Count geq 1}}{{~else}}<pos=10><color=red>○ {{i18n Key}}</pos> <pos=235><size=+1>    ⚠</size></pos></color>
+{{/test}}
+{{/itemlist}}
+{{/scroll}}
+
+
+
+{{~set 'limitLow' 500}}
+{{~set 'limitMedium' 5000}}
+{{~set 'limitGood' 10000}}
+<align=center><size=+7>Components 1</size>
+{{bar 1 0 1  31 '═'}}</align>
+{{scroll 29 1}}
+{{#sortedeach E.S.Items 'Count' true}}
+{{~#test Id 'in' '8399-8411,8426-8427,8430,8435,8436'}}
+<color={{~#test Count geq @root.Data.limitGood}}green>{{~else}}{{~#test Count le @root.Data.limitMedium}}{{~#test Count le @root.Data.limitLow}}red>{{else}}orange>{{/test}}{{~else}}yellow>{{/test}}{{/test}}◉ {{i18n Key}}</pos> <pos=225>{{format Count '{0,6:N0}'}}</pos></color>
+{{/test}}
+{{/sortedeach}}
+{{#itemlist E.S.Items '8399-8411,8426-8427,8430,8435,8436'}}{{~#test Count geq 1}}{{~else}}<color=red>○ {{i18n Key}} <pos=230><size=+1>    ⚠</size></pos></color>
+{{/test}}
+{{/itemlist}}
+{{/scroll}}
+
+
+{{~set 'limitLow' 500}}
+{{~set 'limitMedium' 5000}}
+{{~set 'limitGood' 10000}}
+<align=center><size=+7>Components 2</size>
+{{bar 1 0 1  31 '═'}}</align>
+{{scroll 29 1}}
+{{#sortedeach E.S.Items 'Count' true}}
+{{~#test Id 'in' '8437-8439,8446-8453,8457,8459,8460,8463,8471-8473'}}
+<color={{~#test Count geq @root.Data.limitGood}}green>{{~else}}{{~#test Count le @root.Data.limitMedium}}{{~#test Count le @root.Data.limitLow}}red>{{else}}orange>{{/test}}{{~else}}yellow>{{/test}}{{/test}}◉ {{i18n Key}}</pos> <pos=225>{{format Count '{0,6:N0}'}}</pos></color>
+{{/test}}
+{{/sortedeach}}
+{{#itemlist E.S.Items '8437-8439,8446-8453,8457,8459,8460,8463,8471-8473'}}{{~#test Count geq 1}}{{~else}}<color=red>○ {{i18n Key}} <pos=230><size=+1>    ⚠</size></pos></color>
+{{/test}}
+{{/itemlist}}
+{{/scroll}}
+
+
+{{~set 'limitLow' 500}}
+{{~set 'limitMedium' 5000}}
+{{~set 'limitGood' 10000}}
+<align=center><size=+7>Components 3</size>
+{{bar 1 0 1  31 '═'}}</align>
+{{scroll 29 1}}
+{{#sortedeach E.S.Items 'Count' true}}
+{{~#test Id 'in' '8474-8477,8497,8540,9204,9802-9804,10092,10093,10101,10102,10104,10106'}}
+<color={{~#test Count geq @root.Data.limitGood}}green>{{~else}}{{~#test Count le @root.Data.limitMedium}}{{~#test Count le @root.Data.limitLow}}red>{{else}}orange>{{/test}}{{~else}}yellow>{{/test}}{{/test}}◉ {{i18n Key}}</pos> <pos=225>{{format Count '{0,6:N0}'}}</pos></color>
+{{/test}}
+{{/sortedeach}}
+{{#itemlist E.S.Items '8474-8477,8497,8540,9204,9802-9804,10092,10093,10101,10102,10104,10106'}}{{~#test Count geq 1}}{{~else}}<color=red>○ {{i18n Key}} <pos=230><size=+1>    ⚠</size></pos></color>
+{{/test}}
+{{/itemlist}}
+{{/scroll}}
+
+
+{{~set 'limitLow' 500}}
+{{~set 'limitMedium' 5000}}
+{{~set 'limitGood' 10000}}
+<align=center><size=+7>Components 4</size>
+{{bar 1 0 1  31 '═'}}</align>
+{{scroll 29 1}}
+{{#sortedeach E.S.Items 'Count' true}}
+{{~#test Id 'in' '11393-11398,11406,11408,11409,11416,11426,11427,11439,11441,11444,11445,11453'}}
+<color={{~#test Count geq @root.Data.limitGood}}green>{{~else}}{{~#test Count le @root.Data.limitMedium}}{{~#test Count le @root.Data.limitLow}}red>{{else}}orange>{{/test}}{{~else}}yellow>{{/test}}{{/test}}◉ {{i18n Key}}</pos> <pos=225>{{format Count '{0,6:N0}'}}</pos></color>
+{{/test}}
+{{/sortedeach}}
+{{#itemlist E.S.Items '11393-11398,11406,11408,11409,11416,11426,11427,11439,11441,11444,11445,11453'}}{{~#test Count geq 1}}{{~else}}<color=red>○ {{i18n Key}} <pos=230><size=+1>    ⚠</size></pos></color>
+{{/test}}
+{{/itemlist}}
+{{/scroll}}
+
