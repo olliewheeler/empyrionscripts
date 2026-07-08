@@ -1,0 +1,21 @@
+{{#jsontodictionary '{ "2":"Zirax", "4":"Prey", "5":"Admin", "6":"Talon", "7":"Polaris", "8":"Abandoned", "9":"Abandoned", "10":"Legacy", "11":"UCH", "13":"VOID", "16":"Pirates", "17":"Kriel", "18":"Traders Guild", "19":"Free Colonists", "20":"Tsech Collective", "28":"Farr", "30":"ARC", "77":"X-Corp", "78":"Valterrian", "87":"Neo Machina-Ice Angels", "255":"No Core"}'}}
+
+{{set 'FactionLookup' .}}
+{{~devices @root.E.S 'LookupPOI'}}
+{{setblock 'text'}}
+{{~gettext ../0~}}
+{{~.~}}
+{{/gettext~}}
+{{/setblock~}}
+{{/devices}}
+{{~set 'newtext' (concat "Entities.name like '%" @root.Data.text "%'")~}}
+These are the POIs that contain the word <color=#F5210A><b><u>{{@root.data.text}}</u></b></color>.
+
+{{#scroll 15 1}}
+{{#db 'DiscoveredPOIs' 50 'SolarSystems.name asc' @root.data.newtext}}
+{{#each .}}
+{{set 'FactionName' Entities.facgroup}}
+[<color=yellow>{{~SolarSystems.name}}</color>] -> [<color=green>{{~Playfields.name}}</color>] -> [<color=#1F51FF>{{~Entities.name}}</color>]:[<color=#FF0033>{{lookup @root.Data.FactionLookup (format Entities.facgroup '{0}')}}</color>]{{/each}}
+{{/db}}
+{{/scroll}}
+{{/jsontodictionary}}
