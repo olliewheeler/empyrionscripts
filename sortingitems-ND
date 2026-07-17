@@ -3,10 +3,6 @@
 {{~set 'Sorting' ''}}
 {{~set 'Amount' ''}}
 
-{{#test Id in '4347,4344,1451,2246,2859,2864,3658,4347,5404,5177,5109,5105,3835,3657,3656,5995'}}
-{{~set 'Sorting' 'Misc'}}
-{{/test}}
-
 {{~#test Id 'in' (concat @Ids.Medic @Ids.IngredientExtraMod '1000')}}
 {{~set 'Sorting' 'Meds'}}
 {{/test}}
@@ -36,52 +32,12 @@ Moving to weapons
 {{~set 'Sorting' 'MountedWeaponAmmo'}}
 {{/test}}
 
-{{#test Id in '2967,2969,2970-2972,2974,2976,2978,2980-2981,2983,2985,2988,2989,2993,2994,2997-3001,3003,3010,3015,3017-3022,3026,3027,3030,3031,3035,3039,3044,3045,3047-3051,3054-3056,3061,3063.3070-3072,3078,3079,3084,3086,3092,3094,3100-3104,3112-3125,3133,3134,3142,3147,3152,3205,3216,3285,3368,3379,3448,3468,3470-3476,3478-3480,3485,3486,3505,3506,3509,3515,3518,3521,3524,3527,3530,3533,3534,3544,3554,3555,3571,3641,3701,3733,3754,3761,3763,3773,6112'}}
-{{~set 'Sorting' 'ND-BACV-items'}}
+{{#test Id in '490,594,1313,2164,3147,3151,3155,3157,3159,3163,3165,3167,3169,3171,3173,3175,3179,3183,3187'}}
+{{~set 'Sorting' 'Gardening'}}
 {{/test}}
-
 
 {{#ok @root.Data.Sorting}}
 {{#move ../. @root.E.S @root.Data.Sorting @root.Data.Amount}}
 {{/move}}
 {{/ok}}
 {{/items}}
-
-
-
-
-<align=center><size=14><color=green>
-<u>Cargo In 2</u>
-<align=left><size=6><color=white><indent=10>
-
-Gravity Generator Blocks (BACV) 2720
-LX-2 Prototype Light Railgun 2837
-Hydroponics Bay 2906
-
-ND HV/SV Clone Chamber 3156
-ND Extended Range CV/Base Teleporter 3158
-ND SV Gravity Generator 3160
-ND Grain Hydroponics Bay 3166
-ND Fruit Hydroponics Bay 3168
-ND Vegetables Hydroponics Bay 3170
-ND Natural Stimulant Hydroponics Bay 3172
-ND Natural Sweetener Hydroponics Bay 3176
-ND Mushroom Brown Hydroponics Bay 3180
-ND CV/Base Radioactive Thermoelectric Generator 3213
-ND Auto Miner 3220
-ND Blast Door Blocks 3224
-ND HV and SV Blast Window Blocks 3238
-ND CV and Base Blast Window Blocks 3307
-ND POI Thruster 3570
-Multi-Charge 4158
-Plasma Blaster Charge 4162
-Magnesium Ore 4296
-Pistol Upgrade Kit 4351
-Shotgun upgrade kit 4354
-Alien Parts 4406
-Spoiled food 4429
-
-
-Disruptor Charge 5734
-
-
