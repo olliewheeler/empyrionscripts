@@ -31,18 +31,14 @@
 {{~set 'D' (int (calc @root.Data.SUF '/' 86400))}} {{~set 'H' (int (calc (calc @root.Data.SUF '%' 86400) '/' 3600))}}
 {{~set 'M' (int (calc (calc @root.Data.SUF '%' 3600) '/' 60))}} 
 {{~set 'S' (calc @root.Data.SUF '%' 60)}}
-<color=red>AUTO MINER WATCH
+<color=red>AUTO MINER WATCH</color>
 <color=green>Autominers are automatically removed at 6am Central on Friday.
-This is in {{@root.Data.D}} days,
-{{@root.Data.H}} hours, {{@root.Data.M}} minuets, {{@root.Data.S}} seconds. 
-<color=#1F51FF>
+This is in {{@root.Data.D}} days, {{@root.Data.H}} hours, {{@root.Data.M}} minuets, {{@root.Data.S}} seconds.</color> 
+
 {{#db 'TerrainPlaceables' 100 'blockid desc' 'blockid IN (1108,1109,1110,3199,3200,3201,3861)'}}
 {{#each .}}
-{{TerrainPlaceables.blockid}} - {{i18n TerrainPlaceables.blockid}}:
-{{~Entities.name}}
+[<color=yellow>{{~SolarSystems.name}}</color>] -> [<color=green>{{~Playfields.name}}</color>] -> [<color=#1F51FF>{{~Entities.name}} 
 {{~#ok TerrainPlaceables.facaccess}}
-(Faction){{else}}(private)
-{{~/ok}}➠{{~Playfields.name}}[
-{{~SolarSystems.name}}]
+(Faction){{else}}(private){{/ok}}</color>] -> [<color=#FF0033>{{i18n TerrainPlaceables.blockid}}</color>]
 {{/each}}
 {{/db}}
