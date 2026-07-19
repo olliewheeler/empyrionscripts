@@ -1,0 +1,38 @@
+<color=green>{{set 'Hour' DateTimeNow.Hour}}
+{{set 'Minute' DateTimeNow.Minute}}
+{{set 'Second' DateTimeNow.Second}}
+{{set 'SecondsToday' (calc (calc (calc @root.Data.Hour '*' 3600) '+' (calc @root.Data.Minute '*' 60) ) '+' @root.Data.Second ) }}
+{{set 'TargetSeconds' 18000}}
+{{set 'DaysUntilFriday' 0}}
+{{#test DateTimeNow.DayOfWeek eq 'Monday'}}
+{{set 'DaysUntilFriday' 4}}
+{{/test}}
+{{#test DateTimeNow.DayOfWeek eq 'Tuesday'}}
+{{set 'DaysUntilFriday' 3}}
+{{/test}}
+{{#test DateTimeNow.DayOfWeek eq 'Wednesday'}}
+{{set 'DaysUntilFriday' 2}}
+{{/test}}
+{{#test DateTimeNow.DayOfWeek eq 'Thursday'}}
+{{set 'DaysUntilFriday' 1}}
+{{/test}}
+{{#test DateTimeNow.DayOfWeek eq 'Friday'}} 
+{{set 'DaysUntilFriday' 0}} 
+{{/test}}
+{{#test DateTimeNow.DayOfWeek eq 'Saturday'}}{{set 'DaysUntilFriday' 6}}
+{{/test}}
+{{#test DateTimeNow.DayOfWeek eq 'Sunday'}}
+{{set 'DaysUntilFriday' 5}}
+{{/test}}
+{{set 'SecondsUntilFriday' (calc (calc @root.Data.DaysUntilFriday '*' 86400) '+' (calc @root.Data.TargetSeconds '-' @root.Data.SecondsToday))}}
+{{#test @root.Data.SecondsUntilFriday lt 0}}
+{{set 'SecondsUntilFriday' (calc @root.Data.SecondsUntilFriday '+' 604800)}}
+{{/test}}
+{{set 'Days' (int (calc @root.Data.SecondsUntilFriday '/' 86400))}} {{set 'Hours' (int (calc (calc @root.Data.SecondsUntilFriday '%' 86400) '/' 3600))}}
+{{set 'Minutes' (int (calc (calc @root.Data.SecondsUntilFriday '%' 3600) '/' 60))}} 
+{{set 'Seconds' (calc @root.Data.SecondsUntilFriday '%' 60)}}
+Countdown until autominers are removed.
+{{@root.Data.Days}}d
+{{@root.Data.Hours}}h
+{{@root.Data.Minutes}}m
+{{@root.Data.Seconds}}s
