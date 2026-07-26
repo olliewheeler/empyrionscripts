@@ -16,3 +16,27 @@
 {{/db}}
 
 Make sure you have a LCD called 'LookupName' to look for.
+
+
+
+----
+with some experimental colours
+-----
+
+
+
+{{~devices @root.E.S 'LookupName'}}
+{{setblock 'text'}}
+{{gettext ../0}}
+{{.}}
+{{/gettext}}
+{{/setblock}}
+{{/devices}}
+{{#db 'PlayerData'}}
+{{#each .}}
+{{#test Entities.name in @root.data.text}}
+<color=#1F51FF>{{~Entities.name}}</color> is at<br>[<color=yellow>☀ {{~SolarSystems.name}}</color>]<br>[<color=green>⚛ {{~Playfields.name}}</color>]
+{{else}}
+{{/test}}
+{{/each}}
+{{/db}}
