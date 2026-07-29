@@ -29,6 +29,23 @@ Teleport to: X:{{Position.x}} Y:
 {{/ok}}
 {{/use}}
 {{/signalevents}}
-0
-150
-123
+
+
+
+
+
+--------------------
+INSTRUCTIONS
+
+This teleporting script will allow you to move anywhere around a structure. This does not teleport you to another structure, or to another playfield.
+
+How to use:
+Put down a signal causing device. The plate you stand on, seems to work best.
+Once it's down, have it create a signal with a unique name. Put the name of this signal, in line 1 of this script, between the quotes.
+
+Then, go to the location you want to appear. I recommend putting down a block. Use the 'di' command to identify the X Y and Z coordinates of that block. Then, remove the block.
+Put those coordinates, into line 19 of this script. So your line should be {{#block @root.E.S X Y Z}}. 
+
+Obviously, the LCD that this script is on must be named 'Script:' with whatever you like afterwards, so the script will execute.
+I would also recommend setting this LCD to 'follow' on/off on the signal. You do not need this script to be sat looping waiting for someone to touch the pad, until someone actually touches the pad. 
+This way, when you touch the pad, the LCD switches on, the script executes, and you telelport, and then the LCD and script will switch off. which is neat.
