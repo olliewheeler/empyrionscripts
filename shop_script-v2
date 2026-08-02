@@ -1,6 +1,6 @@
--- Shop Script v2 - Auto-configured
+-- Shop Script v2 - Auto-configured, payment-method agnostic
 -- Setup:
---   ShopAdmin: 1x product item + platinum stack (count = price)
+--   ShopAdmin: 1x product item + stack of payment cards (count = price in cards)
 --   ShopStock: items to sell
 --   ShopPayment: player payment input
 --   ShopPickup: sold items appear here
@@ -8,6 +8,7 @@
 --   ShopLCD: display
 
 {{set 'pid' 0}}{{set 'pname' 'Not Configured'}}
+{{set 'cid' 0}}{{set 'cname' 'Not Configured'}}
 {{set 'price' 0}}{{set 'stock' 0}}
 {{set 'totalPay' 0}}{{set 'payOK' false}}
 {{set 'moved' false}}{{set 'status' 'Configuring...'}}{{set 'sc' 'white'}}
@@ -15,15 +16,25 @@
 -- Full logic every 5 cycles
 {{#test (calc @root.CycleCounter '%' 5) eq 0}}
 
-  -- Read config from admin box
+  -- Read config from admin box: detect product and payment type
   {{#items E.S 'ShopAdmin'}}
-    {{#test Id 'eq' 5995}}
-      {{set 'price' Count}}
-    {{/test}}
-    {{#test Id 'neq' 5995}}
+    {{#test Id 'neq' @root.Data.cid}}
       {{#test @root.Data.pid 'eq' 0}}
         {{set 'pid' Id}}{{set 'pname' Name}}
       {{/test}}
+    {{/test}}
+  {{/items}}
+
+  {{#items E.S 'ShopAdmin'}}
+    {{#test Id 'neq' @root.Data.pid}}
+      {{set 'cid' Id}}{{set 'cname' Name}}
+    {{/test}}
+  {{/items}}
+
+  -- Read price from payment stack count in admin box
+  {{#items E.S 'ShopAdmin'}}
+    {{#test Id 'eq' @root.Data.cid}}
+      {{set 'price' Count}}
     {{/test}}
   {{/items}}
 
@@ -37,7 +48,7 @@
   -- Sum all payment in the payment box
   {{set 'totalPay' 0}}
   {{#items E.S 'ShopPayment'}}
-    {{#test Id 'eq' 5995}}
+    {{#test Id 'eq' @root.Data.cid}}
       {{#math @root.Data.totalPay '+' Count}}{{set 'totalPay' .}}{{/math}}
     {{/test}}
   {{/items}}
@@ -58,7 +69,7 @@
       {{/items}}
       {{#if @root.Data.moved}}
         {{#items E.S 'ShopPayment'}}
-          {{#test Id 'eq' 5995}}
+          {{#test Id 'eq' @root.Data.cid}}
             {{#move . @root.E.S 'ShopReserve' @root.Data.price}}{{/move}}
           {{/test}}
         {{/items}}
@@ -72,7 +83,7 @@
       {{set 'status' 'Insert Payment'}}{{set 'sc' 'yellow'}}
     {{else}}
       {{set 'status' 'Out of Stock'}}{{set 'sc' 'red'}}
-    {{/test}}
+    {{/if}}
   {{/if}}
 
 {{/test}}
@@ -85,7 +96,7 @@
 <color=yellow><size=30>{{@root.Data.pname}}</size></color>
 <size=22>══════════════════════</size>
 
-<color=white>Price: <color=yellow>{{@root.Data.price}}</color> Platinum</color>
+<color=white>Price: <color=yellow>{{@root.Data.price}}</color> {{@root.Data.cname}}</color>
 <color=white>Stock: <color=cyan>{{@root.Data.stock}}</color></color>
 
 <color={{@root.Data.sc}}><size=24>{{@root.Data.status}}</size></color>
