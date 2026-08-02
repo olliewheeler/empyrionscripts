@@ -1,0 +1,95 @@
+-- Original shop script -- 
+
+{{set 'cost' 1}}
+{{set 'volume' 10000}}
+{{#items E.S 'box1-item'}}
+{{set 'itemID' Id}}
+{{/items}}
+{{#items E.S 'box1'}}
+
+{{#test Id 'eq' 5995}}
+{{#test Count 'eq' @root.Data.cost}}
+{{set 'Payed' true}}
+<color=green>Thank you for the correct deposit.</color>
+{{/test}}
+{{/test}}
+{{/items}}
+{{#items E.S 'box1-item'}}
+{{#test Id 'eq' @root.Data.itemID}}
+{{#test Count 'lt' @root.Data.volume}}
+<color=red>Not enough item.
+{{set 'emptybox' true}}
+{{/test}}
+{{/test}}
+{{else}}
+{{set 'emptybox' true}}
+<color=red>The shop is empty.
+{{/items}}
+{{#items E.S 'box1'}}
+{{#test Id 'eq' @root.Data.itemID}}
+<color=red>Please remove your item.
+No new transactions until previous item has been removed.
+{{set 'emptybox' true}}
+{{/test}}
+{{/items}}
+
+{{#if @root.Data.emptybox}}
+Transactions halted
+{{else}}
+{{#if @root.Data.Payed}}
+{{#items E.S 'box1-item,box1'}}
+{{~set 'ShopBox1NB' ''}}
+{{~set 'Amount' ''}}
+
+<color=orange>Transfer In Progress</color>
+{{#test Id in '5995'}}
+{{~set 'ShopBox1NB' 'moneybox'}}
+{{/test}}
+
+{{#test Id in @root.Data.itemID}}
+{{~set 'ShopBox1NB' 'box1'}}
+{{~set 'Amount' @root.Data.volume}}
+{{/test}}
+
+{{#ok @root.Data.ShopBox1NB}}
+{{#move ../. @root.E.S @root.Data.ShopBox1NB @root.Data.Amount}}
+
+{{Source}} -> {{Destination}}
+{{/move}}
+{{/ok}}
+{{/items}}
+
+{{else}}
+{{#items E.S 'box1-item'}}
+<align=center><color=#00CEEB>This box is selling 
+{{@root.Data.volume}} {{Name}} 
+for {{@root.Data.cost}} Platinum credits.
+ 
+There is {{Count}}
+available to purchase.
+ 
+Deposit exactly {{@root.Data.cost}} Platinum credits into the box and wait for this screen to inform you that your item is ready to retrieve. 
+ 
+<smallcaps><color=red>No refunds
+Do no open the box until instructed to or you may lose your money</color> 
+Item ID {{Id}}
+</color>
+{{/items}}
+{{/if}}
+{{/if}}
+
+
+-- front LCD script --
+<align=center><color=#00CEEB><smallcaps>
+{{#items E.S 'box1'}}
+This box contains 
+{{Count}} {{Name}}
+
+<smallcaps><color=red>No refunds
+Do no open the box until instructed to or you may lose your money</color> 
+Item ID {{Id}}
+</color>
+{{else}}
+<size=20>Ready</size>
+Please insert cash.
+{{/items}}
